@@ -1,0 +1,15 @@
+// fonts
+$font: 'Inter', sans-serif;
+
+// colors
+$color-light: #fff;
+$color-dark: #222227;
+$color-accent: #a583ff;
+
+// breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+
+$mobile-max: $tablet - 1;
+$tablet-max: $desktop - 1;
