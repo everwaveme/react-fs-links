@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.scss';
+import DataInfo from './components/DataInfo';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="container">
+      <div className="data-wrap">
+        <DataInfo />
+      </div>
     </div>
   );
 }
