@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import DataInfo from './components/DataInfo';
+import CardInfo from './components/CardInfo';
 
 function App() {
   return (
     <div className="container">
-      <div className="data-wrap">
-        <DataInfo />
+      <div className="card-wrap">
+        <CardInfo />
       </div>
     </div>
   );
