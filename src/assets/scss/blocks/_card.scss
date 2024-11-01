@@ -78,7 +78,7 @@
   }
 }
 
-.card-tabs {
+.card-tabs-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -87,9 +87,7 @@
   border-bottom: 1px solid rgba($color-dark, .1);
 }
 
-.card-tabs-social,
-.card-tabs-dev,
-.card-tabs-photography {
+.card-tab {
   display: inline-block;
   margin: 0 5px;
   padding: 7px 17px;
@@ -105,26 +103,13 @@
   &:hover {
     background-color: rgba($color-accent, .1);
   }
-
-  &.active {
-    background-color: rgba($color-accent, .3);
-  }
 }
 
-.card-social-list,
-.card-dev-list,
-.card-photography-list {
+.card-list {
   display: none;
   margin: 20px 0;
   list-style: none;
 
-  &.active {
-    display: block;
-  }
-}
-
-.card-dev-list,
-.card-photography-list {
   height: 300px;
   overflow-y: auto;
 
@@ -142,11 +127,10 @@
   }
 }
 
-.card-social-link,
-.card-dev-link,
-.card-photography-link {
+.card-item-link {
   display: flex;
   align-items: center;
+  margin-right: 1px;
   padding: 15px;
   text-decoration: none;
 
@@ -156,14 +140,7 @@
   }
 }
 
-.card-dev-link,
-.card-photography-link {
-  margin-right: 1px;
-}
-
-.card-social-icon,
-.card-dev-icon,
-.card-photography-icon {
+.card-item-icon {
   display: block;
   flex-basis: 10%;
   margin-right: 20px;
@@ -174,24 +151,26 @@
   background-size: contain;
 }
 
-.card-social-info,
-.card-dev-info,
-.card-photography-info {
+.card-item-info {
   flex-basis: 90%;
 }
 
-.card-social-title,
-.card-dev-title,
-.card-photography-title {
+.card-item-title {
   font-size: 14px;
   line-height: 21px;
   color: $color-dark;
 }
 
-.card-social-desc,
-.card-dev-desc,
-.card-photography-desc {
+.card-item-desc {
   font-size: 13px;
   line-height: 19px;
   color: rgba($color-dark, .7);
+}
+
+.active-tab {
+  background-color: rgba($color-accent, .3);
+}
+
+.active-list {
+  display: block;
 }
