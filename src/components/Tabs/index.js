@@ -5,7 +5,6 @@ import dataDev from "../../data/dataDev";
 import dataPhotography from "../../data/dataPhotography";
 
 function Tabs() {
-
     return (
         <div>
             <div className="card-tabs-wrap">
@@ -20,7 +19,7 @@ function Tabs() {
                 </button>
             </div>
 
-            <ul className="card-list">
+            <ul className="card-list active-list">
                 {dataSocial.map((item) => {
                     return (
                         <ListItem
@@ -48,7 +47,7 @@ function Tabs() {
                 })}
             </ul>
 
-            <ul className="card-list active-list">
+            <ul className="card-list">
                 {dataPhotography.map((item) => {
                     return (
                         <ListItem
