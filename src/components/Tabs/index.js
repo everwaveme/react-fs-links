@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import ListItem from "../ListItem";
 import dataSocial from "../../data/dataSocial";
 import dataDev from "../../data/dataDev";
 import dataPhotography from "../../data/dataPhotography";
 
 function Tabs() {
+    const [toggleValue, setToggleValue] = useState(1);
+
+    function toggleTab(value) {
+        setToggleValue(value);
+    }
+
     return (
         <div>
             <div className="card-tabs-wrap">
-                <button className="card-tab active-tab">
+                <button className={toggleValue === 1 ? 'card-tab active-tab' : 'card-tab'} onClick={() => toggleTab(1)}>
                     Social
                 </button>
-                <button className="card-tab">
+                <button className={toggleValue === 2 ? 'card-tab active-tab' : 'card-tab'} onClick={() => toggleTab(2)}>
                     Dev
                 </button>
-                <button className="card-tab">
+                <button className={toggleValue === 3 ? 'card-tab active-tab' : 'card-tab'} onClick={() => toggleTab(3)}>
                     Photography
                 </button>
             </div>
 
-            <ul className="card-list active-list">
+            <ul className={toggleValue === 1 ? 'card-list active-list' : 'card-list'}>
                 {dataSocial.map((item) => {
                     return (
                         <ListItem
@@ -33,7 +39,7 @@ function Tabs() {
                 })}
             </ul>
 
-            <ul className="card-list">
+            <ul className={toggleValue === 2 ? 'card-list active-list' : 'card-list'}>
                 {dataDev.map((item) => {
                     return (
                         <ListItem
@@ -47,7 +53,7 @@ function Tabs() {
                 })}
             </ul>
 
-            <ul className="card-list">
+            <ul className={toggleValue === 3 ? 'card-list active-list' : 'card-list'}>
                 {dataPhotography.map((item) => {
                     return (
                         <ListItem
