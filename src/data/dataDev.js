@@ -9,7 +9,7 @@ const dataDev = [{
     name: 'Earth Polychromatic Imaging Camera',
     desc: 'Daily pictures of Planet Earth',
     icon: 'satellite-icon.png',
-    link: 'https://epic.everwave.ru/'
+    link: 'https://epicnasa.ru/'
 }, {
     id: '3',
     name: 'Links App',
